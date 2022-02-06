@@ -21,6 +21,6 @@ if __name__ == '__main__':
         exit(1)
 
     start_http_server(PORT)
-    print('Start http server(port: ' + str(PORT) + ')')
+    print('Started server(port: ' + str(PORT) + ')')
     while True:
         get_metrics(sys.argv[1], 30)
