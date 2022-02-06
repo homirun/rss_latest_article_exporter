@@ -1,1 +1,1 @@
-# rss_latest_article_exporter
+# RSS latest article exporter
