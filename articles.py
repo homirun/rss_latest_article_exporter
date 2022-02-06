@@ -5,7 +5,7 @@ import datetime
 
 class Articles:
     def __init__(self, url: str):
-        self.url = url + "?feed=rss2"
+        self.url = url
 
     def latest_diff_date(self) -> datetime:
         parsed_articles = self._parse_rss_xml(requests.get(self.url).content)
@@ -17,8 +17,3 @@ class Articles:
     def _parse_rss_xml(response_xml: bytes) -> Et:
         root = Et.fromstring(response_xml)
         return root
-
-
-if __name__ == '__main__':
-    article = Articles('https://blog.homi.run/')
-    print(article.latest_diff_date())
